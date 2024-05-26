@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NEXTIN</title>
+	<style type="text/css">
+		body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /*navbar section*/
+         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #272727;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+            text-decoration: none;
+
+        }
+
+        .nav-links li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover{
+            color: black;
+            text-decoration: none;
+            background-color: white;
+            padding: 10px;
+        }
+        /*Widgets*/
+         .widget-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow widgets to wrap to the next row */
+            justify-content: center; /* Center widgets horizontally */
+            gap: 20px; /* Add some space between widgets */
+            margin:auto;
+            margin-top:10%;
+            margin-bottom: 10%;
+        }
+
+        .widget {
+             width: calc(33.33% - (20px * 2));
+    height: 150px;
+    background-color: #89CFF0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px; /* Adjust margin to provide spacing between widgets */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        }
+
+        .widget:hover {
+            background-color: black;
+            color: white;
+        }
+
+         /*footer section*/
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+  
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-content ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .footer-content ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+	</style>
+</head>
+<body>
+      <!--navbar section-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="C:\Users\admin\Desktop\ai website\logo1.png" alt="NextIn Logo">
+        </div>
+        <ul class="nav-links">
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="products.html">Products</a></li>
+            <li ><a href="apis.html">APIs</a></li>
+            <li ><a href="#request">Reports</a></li>
+            <li ><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!--widgets-->
+     <div class="widget-container">
+        <div class="widget">Widget 1</div>
+        <div class="widget">Widget 2</div>
+        <div class="widget">Widget 3</div>
+        <div class="widget">Widget 4</div>
+        <div class="widget">Widget 5</div>
+        <div class="widget">Widget 6</div>
+        <div class="widget">Widget 7</div>
+        <div class="widget">Widget 8</div>
+    </div>
+    <!--footer section-->
+   <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 NextIn. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
