@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTIN</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /*navbar section*/
+         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #272727;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+            text-decoration: none;
+
+        }
+
+        .nav-links li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover{
+            color: black;
+            text-decoration: none;
+            background-color: white;
+            padding: 10px;
+        }
+
+
+        /* product section*/
+        .container {
+            text-align: left;
+            width: 80%; /* Optional: Adjust width as needed */
+            margin: auto; /* Center the container horizontally */
+            margin-top:10%;
+            margin-bottom:10%;
+        }
+
+        .container h1 {
+            margin: 0;
+        }
+
+        .search-container {
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid grey;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            padding-right: 20px; /* Add spacing between columns */
+        }
+        
+        /*footer section*/
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-content ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .footer-content ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!--navbar section-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="C:\Users\admin\Desktop\ai website\logo1.png" alt="NextIn Logo">
+        </div>
+        <ul class="nav-links">
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="products.html">Products</a></li>
+            <li ><a href="apis.html">APIs</a></li>
+            <li ><a href="#request">Reports</a></li>
+            <li ><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!--product section-->
+    
+    <div class="container">
+        <h1>Products</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+        </div>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valuts</td>
+                    <td>This is the description for product 1.</td>
+                </tr>
+                <tr>
+                    <td>Pressure Checker</td>
+                    <td>This is the description for product 2.</td>
+                </tr>
+                <tr>
+                    <td>Product 3</td>
+                    <td>This is the description for product 3.</td>
+                </tr>
+                <tr>
+                    <td>Product 4</td>
+                    <td>This is the description for product 4.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   <!--footer section-->
+   <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 NextIn. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <script>
+        function searchProducts() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toLowerCase();
+            let table = document.getElementById('productTable');
+            let tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[0];
+                if (td) {
+                    let txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
